@@ -2,7 +2,10 @@ import requests, time
 from bs4 import BeautifulSoup
 from tabulate import tabulate
 
+## Определяем список ключевых слов:
 KEYWORDS = ['дизайн', 'фото', 'web', 'python']
+
+## Ваш код
 headers = ['date','title','link']
 def fn(params):
     url = 'https://habr.com/ru/search/'
