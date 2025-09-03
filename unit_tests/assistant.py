@@ -14,27 +14,26 @@ directories = {
 
 def get_name(doc_number):
     # your code
-    res = ''
+    res = []
     for str_val in documents:
-
         if doc_number == str_val.get('number'):
-            res = str_val.get('name')
+            res = res.append(str_val.get('name'))
             break
-    if not res:
-        return 'Документ не найден'
+    # if not res:
+    #     return 'Документ не найден'
     return res
 
 
 def get_directory(doc_number):
-    result = []  # создание массива результатов поиска
+    result = []  # создание списка результатов поиска
     for key, val in directories.items():
         if doc_number in val:
             result.append([key, val])
-    if result:
-        sh = result[0][0]
-    else:
-        return 'Полки с таким документом не найдено'
-    return sh
+    # if result:
+        # sh = result[0][0]
+    # else:
+    #     return 'Полки с таким документом не найдено'
+    return result
 
 
 def add(document_type, number, name, shelf_number):
